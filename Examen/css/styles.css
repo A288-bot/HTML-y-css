@@ -1,0 +1,294 @@
+/* Variables en CSS: */
+:root{
+    /* Paleta de colores de mi página */
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --grisOscuro: #4f6470;
+    --azulOscuro: #101d30;
+    --azulGris: #7c99aa;
+    --azulCasiBlanco: #bcd0df;
+    --azulClaro: #5b8baf;
+    --azulgrisMasOscuro: #567c92;
+
+    /* fuente principal */
+    --fuentePrincipal: "Work Sans",sans-serif;
+
+    /* tamaño de fuente */
+    --TamañoFuente: 3.3rem;
+}
+/* 1.las variables sirven para determinar los colores y letras a la página web */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: mandatory;
+}
+/* 2.font size se refiere al tamaño de la fuente */
+/* 3.box sizing establece como se calcula el ancho y alto de un elemento */
+
+body {
+    font-size: 16px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    background-color: var(--azulCasiBlanco);
+}
+/* 4.backround color se refiere al color de fondo de toda la página  */
+/* 5.font family indica cual sera la fuente del cuerpo */
+h1, h2 {
+    text-align: center;
+}
+/* 6.text align indica la posicion para el texto */
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+    text-align: center;
+    font-style: oblique;
+}
+/* 7.font style indica el estilo de la letra o fuente */
+
+.sombra {
+    -webkit-box-shadow: 10px 17px 11px -4px
+    rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 17px 11px -4px
+    rgba(0,0,0,0.75);
+    box-shadow: 10px 17px 11px -4px
+    rgba(0,0,0,0.75);
+    border-radius: 4rem;
+    background-color: var(--azulgrisMasOscuro);
+    padding: 2rem;
+}
+/* 8.padding es el espacio entre el texto o contenido y el borde */
+.titulo {
+    font-size: var(--TamañoFuente);
+}
+
+.titulo span {
+    font-size: 2rem;
+    font-style: oblique;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color:var(--azulGris);
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+}
+
+.place {
+    font-weight: 600;
+    color: var(--grisOscuro);
+}
+
+.boton {
+    background-color: var(--azulOscuro);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    width: none;
+    text-align: center;
+    border: none;
+}
+
+.contenedor {
+    max-width: 100rem;
+    margin:0 auto 0 auto;
+    margin-top: 5rem;
+
+}
+/* 9.margin indica el espacio fuera del borde  */
+
+.nav-bg {
+    background-color: var(--azulClaro);
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 10.display indica el tipo de caja que se usara  */
+/* 11.align items indica la alineacion del contenido dentro de una caja  */
+@media (min-width: 400px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+ .boton {
+        width: auto;
+    }
+
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.navegacion-principal a {
+    padding: 1.5rem;
+    color: var(--azulOscuro);
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 650;
+}
+.navegacion-principal a:hover {
+    background-color:var(--azulOscuro);
+    color:var(--azulCasiBlanco);
+}
+
+.hero {
+    background-image: url(../img/heero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 4rem;
+
+}
+
+.heero {
+    background-image: url(../img/heeero.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    /* 12.height indica la altura */
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    /* 13. este es el color de fondo en la imagen */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 700px) {
+
+    .servicios {
+        display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+@media (min-width: 700px) {
+
+    .curriculum {
+        display: grid;
+         grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+.curriculum {
+    text-align: center;
+}
+
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p {
+    line-height: 2.5;
+    text-align: center;
+}
+/* 14.line height es para el interlineado en textos */
+.servicio .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--azulOscuro);
+    color: var(--azulCasiBlanco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    /* 15.justify content alinea los elementos horizontalmente */
+    align-items: center;
+}
+/* 16.border radius es la curvatura de algun boton o icono o cuadro */
+.formulario {
+    background-color:var(--azulGris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+/* 17.text transform sirve para el cambio de mayúsculas y minusculas */
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--grisOscuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar .boton {
+    width: 100%;
+    color: var(--blanco);
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* 18.flex direction es la alineacion ya sea columna o fila */
+
+.iconos .icono {
+    height: 12rem;
+    width: 12rem;
+    /* 19.width es para la anchura */
+    background-color: var(--grisOscuro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    /* 20.justify content alinea los elementos horizontalmente */
+    align-items: center;
+    color: var(--oscuro);
+}
+
+
+footer p {
+    text-align: center;
+}
